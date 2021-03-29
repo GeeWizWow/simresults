@@ -2,7 +2,7 @@
   "name": "simresults",
   "version": "1.0.0",
   "description": "Sim racing result reader for JS",
-  "main": "src/index.js",
+  "main": "dist/simresults.js",
   "directories": {
     "test": "test",
     "src": "src",
