@@ -2,7 +2,7 @@
   "name": "simresults",
   "version": "1.0.0",
   "description": "Sim racing result reader for JS",
-  "main": "src/reader.js",
+  "main": "src/index.js",
   "directories": {
     "test": "test",
     "src": "src",
@@ -16,6 +16,7 @@
     "type": "git",
     "url": "git+https://github.com/GeeWizWow/simresults.git"
   },
+  "author": "Maurice van der Star <mauserrifle@gmail.com> (http://mauserrifle.github.io/resume)",
   "contributors": [
     "Maurice van der Star <mauserrifle@gmail.com> (http://mauserrifle.github.io/resume)",
     "Finn Scott (https://github.com/GeeWizWow)"
