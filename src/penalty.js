@@ -74,7 +74,7 @@ export class Penalty {
     }
 
     getLap() {
-        return this.lap;
+        return this._lap;
     }
 
     setServedLap(lap) {
