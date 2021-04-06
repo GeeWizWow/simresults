@@ -106,7 +106,7 @@ export class Penalty {
 
     setPenalty(penalty) {
         this._penalty = penalty;
-        return penalty;
+        return this;
     }
 
     getPenalty() {
