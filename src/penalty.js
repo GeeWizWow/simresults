@@ -17,6 +17,7 @@ export class Penalty {
     _date;
     _elapsedSeconds;
     _participant;
+    _lap;
     _served;
 
     setMessage(message) {
@@ -62,6 +63,15 @@ export class Penalty {
 
     getParticipant() {
         return this._participant;
+    }
+
+    setLap(lap) {
+        this._lap = lap;
+        return this;
+    }
+
+    getLap() {
+        return this.lap;
     }
 
     setServed(served) {

@@ -338,6 +338,12 @@ export class AccReader {
                 + `cleared in lap ${penaltyData.clearedInLap || 'unknown'}`
             );
 
+            const penaltyLap = penaltyParticipant.getLap(penaltyData.violationInLap);
+
+            if (penaltyLap) {
+                penalty.setLap(penaltyLap);
+            }
+
             penalty
                 .setParticipant(penaltyParticipant)
                 .setServed(Boolean(penaltyData.clearedInLap));
@@ -347,12 +353,10 @@ export class AccReader {
             if (
                 session.getType() !== SessionType.Race
                 && penaltyData.penalty === 'RemoveBestLaptime'
+                && penaltyLap
             ) {
-                const penaltyLap = penaltyParticipant.getLap(penaltyData.violationInLap);
-                if (penaltyLap) {
-                    penaltyLap.setTime(undefined);
-                    penaltyLap.setSectorTimes([]);
-                }
+                penaltyLap.setTime(undefined);
+                penaltyLap.setSectorTimes([]);
             }
         });
 
