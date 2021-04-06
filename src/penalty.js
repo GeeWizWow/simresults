@@ -18,7 +18,10 @@ export class Penalty {
     _elapsedSeconds;
     _participant;
     _lap;
+    _servedLap;
     _served;
+    _reason;
+    _penalty;
 
     setMessage(message) {
         this._message = message;
@@ -74,6 +77,15 @@ export class Penalty {
         return this.lap;
     }
 
+    setServedLap(lap) {
+        this._servedLap = lap;
+        return this;
+    }
+
+    getServedLap() {
+        return this._servedLap;
+    }
+
     setServed(served) {
         this._served = served;
         return this;
@@ -81,6 +93,24 @@ export class Penalty {
 
     isServed() {
         return this._served;
+    }
+
+    setReason(reason) {
+        this._reason = reason;
+        return this;
+    }
+
+    getReason() {
+        return this._reason;
+    }
+
+    setPenalty(penalty) {
+        this._penalty = penalty;
+        return penalty;
+    }
+
+    getPenalty() {
+        return this._penalty;
     }
 }
 

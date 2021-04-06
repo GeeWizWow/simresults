@@ -339,12 +339,19 @@ export class AccReader {
             );
 
             const penaltyLap = penaltyParticipant.getLap(penaltyData.violationInLap);
+            const servedLap = penaltyParticipant.getLap(penaltyData.clearedInLap);
 
             if (penaltyLap) {
                 penalty.setLap(penaltyLap);
             }
 
+            if (servedLap) {
+                penalty.setServedLap(servedLap);
+            }
+
             penalty
+                .setReason(penaltyData.reason)
+                .setPenalty(penaltyData.penalty)
                 .setParticipant(penaltyParticipant)
                 .setServed(Boolean(penaltyData.clearedInLap));
 
